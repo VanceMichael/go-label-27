@@ -7,6 +7,12 @@ import (
 )
 
 type Job func(context.Context) error
+
+type Submission struct {
+	Accepted int
+	Total    int
+}
+
 type Pool struct {
 	workers int
 	jobs    chan Job
